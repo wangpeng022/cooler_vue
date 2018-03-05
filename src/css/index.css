@@ -1,0 +1,329 @@
+/* 公共样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/* 主内容 */
+body{
+    overflow: hidden;
+}
+.content {
+    width: 1348px;
+    height: 935px;
+    background-color: #F9FAFC;
+    border: 1px solid rgba(219, 227, 234, 1);
+    border-radius: 4px;
+    margin: 10px;
+    overflow-x: hidden;
+    /* overflow-y: scroll */
+}
+
+/* 冷机组-cooler 冷冻一次泵租-freezer */
+
+.content .cooler{
+    width: 1300px;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 两个分块的 页卡 */
+
+.content .cooler .header1{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 36px;
+    height: 100%;
+    font-size: 16px;
+    color: #fff;
+    /* text-align: center; */
+    background-color: #7A94AD;
+    border-radius: 4px 0 0 4px;
+}
+
+.content .cooler .header2{
+    font-size: 14px;
+    height: 22px;
+}
+
+.content .cooler .header2 .left{
+    display: inline-block;
+}
+.content .cooler .header2 .left span{
+    margin: 0 10px;
+}
+.content .cooler .header2 .right{
+    display: block;
+    float: right;
+    margin-right: 20px;
+}
+
+
+/* 头部按钮公共样式 */
+
+.controlButton {
+    display: inline-block;
+    width: 41px;
+    height: 19px;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid #7A94AD;
+    background-color: #F9FAFC;
+}
+
+;
+.controlButton:hover {
+    background-color: #ECECEC;
+}
+
+.content .cooler .header1 span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+/* 分组列表 */
+
+.content .cooler li{
+    position: relative;
+    width: 1258px;
+    margin: 10px;
+    padding: 10px 10px 0 15px;
+    color: #333;
+    border: 1px solid rgba(219, 227, 234, 1);
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 2px 5px 5px #E6E6E6;
+}
+
+
+/* 页卡，色标 三色轮回*/
+.content .cooler li:nth-of-type(3n+1)::before{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 10px;
+    height: 100%;
+    background-color: #668FF7;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #668FF7;
+}
+
+.content .cooler li:nth-of-type(3n+2)::before{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 10px;
+    height: 100%;
+    background-color: #58C4BF;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #58C4BF;
+}
+
+.content .cooler li:nth-of-type(3n+3)::before{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 10px;
+    height: 100%;
+    background-color: #F6C230;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #F6C230;
+}
+
+/* li里的四大功能模块 */
+.content li .waterTmp,
+.content li .tmpIf,
+.content li .openNum,
+.content li .kw {
+    min-height: 110px;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+.content li .kw {
+    width: 360px;
+}
+
+.waterTmp,
+.tmpIf {
+    width: 320px;
+    /* line-height: 200%; */
+}
+.tmpIf p span{
+    display: inline-block;
+    width: 60px;
+}
+
+.waterTmp header,
+.tmpIf header,
+.openNum header {
+    margin-bottom: 5px;
+    padding: 3px 0;
+    font-size: 13px;
+    width: 100%;
+    min-height: 15px;
+    /* height: 10%; */
+}
+
+.waterTmp .left,
+.waterTmp .right {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 10px, 40px;
+    width: 48%;
+    /* height: 60%; */
+}
+
+.waterTmp .left span,
+.waterTmp .right span {
+    display: inline-block;
+    height: 20%;
+}
+.waterTmp .right span.bgEdit{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-image: url("../assets/images/u13643.png");
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+}
+
+.tmpIf {
+    font-size: 13px;
+}
+
+.tmpIf p {
+    display: block;
+    height: 15%;
+    /* line-height: 20px; */
+    color: #c9c9c9;
+}
+
+
+/* 高亮样式 公共 */
+
+.content .select,.kw .num p{
+    color: #04AAD2;
+    font-weight: 700;
+}
+
+.openNum {
+    width: 160px;
+}
+.openNum header{
+    margin-bottom: 20px;
+}
+
+.kw,.openNum{
+    background-color: #f2f2f2;
+}
+
+.kw .num,
+.kw .load,
+.kw .watts,
+.kw .state,
+.kw .switch_handle {
+    display: inline-block;
+    width: 68px;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: #666;
+    vertical-align: top;
+    text-align: center;
+}
+
+.kw header{
+    margin-bottom: 5px;
+    height: 20px;
+    padding: 3px 0;
+}
+.kw p{
+    height: 24px;
+}
+
+/* 状态栏小灰点 默认 */
+
+.kw .state em {
+    display: block;
+    position: relative;
+    top: 4px;
+    left: 25px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #C9C9C9;
+}
+
+.kw .state em::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #C9C9C9;
+}
+
+
+/* 正常小绿点 normal */
+
+.kw .state em.normal {
+    background-color: #3DBC5D;
+}
+
+.kw .state em.normal::before {
+    border: 1px solid #3DBC5D;
+}
+
+
+/* 故障小红点 wrong */
+
+.kw .state em.wrong {
+    background-color: #F67720;
+}
+
+.kw .state em.wrong::before {
+    border: 1px solid #F67720;
+}
+
+
+/* 粗体公共样式 */
+
+.changeBig {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.backGray {
+    font-weight: 700;
+    background-color: #f2f2f2;
+    color: #666;
+}
+
+.controlColor {
+    color: #637E99;
+    text-decoration: none;
+    cursor: pointer;
+}
