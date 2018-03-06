@@ -327,3 +327,8 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
+/* 滚动条 */
+body ::-webkit-scrollbar { width: 5px; height: 5px; }
+body ::-webkit-scrollbar-track { background-color: rgba(0, 0, 0, 0.1); -webkit-border-radius: 8px; }
+body ::-webkit-scrollbar-thumb { -webkit-border-radius: 3px; background: #aaa; border: 1px solid #999; }
+body ::-webkit-scrollbar-thumb:vertical:hover { background-color: rgba(0, 0, 0, 0.5); background: #999; border: 1px solid #808080;}

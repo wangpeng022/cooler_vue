@@ -35,10 +35,10 @@ app.use(function (req, res, next) {
     res.end(JSON.stringify(LDECB))
 });
     app.get("/api/lqb",function (req,res) {
-    res.end(JSON.stringify(LDECB))
+    res.end(JSON.stringify(LQB))
 });
     app.get("/api/lqt",function (req,res) {
-    res.end(JSON.stringify(LDECB))
+    res.end(JSON.stringify(LQT))
 });
 
 let port = 3000;

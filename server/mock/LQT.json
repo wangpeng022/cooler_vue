@@ -86,6 +86,18 @@
                 "status": 1,
                 "autoPointId": "F03.33601",
                 "controlPointId": "F03.63007010"
+            },
+        {
+                "id": "F04",
+                "name": "3#冷却塔",
+                "autoStatus": 0.0,
+                "frequency": 48.0,
+                "frequencyPointId": "F03.63007021",
+                "power": 7.5,
+                "alarmStatus": 0,
+                "status": 1,
+                "autoPointId": "F03.33601",
+                "controlPointId": "F03.63007010"
             }]
         }],
         "moduleOpenCount": 3

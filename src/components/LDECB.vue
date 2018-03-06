@@ -1,19 +1,19 @@
 <template>
     <ul class="cooler">
             <div class="header1">
-                <span>冷冻一次泵组</span>
+                <span>冷冻二次泵组</span>
             </div>
-            <li v-for="(item,index) in LDYCB.groupArray" :key="index">
+            <li v-for="(item,index) in LDECB.groupArray" :key="index">
                 <div class="header2">
                     <div class="left">
                         <span class="changeBig" >{{item.name}}</span>
                          开启
                         <span class="select" v-text=" item.openCount">--</span> 台
-                        <span class="controlColor"   >群控设置</span>
+                        <span class="controlColor" type="LDECB" >群控设置</span>
                         群控逻辑：
                         <span v-text="item.logicName"></span>
                          <!-- <span v-text="item.logicId"></span> -->
-                        <span class="controlColor" onclick="LJ_logic()">更改</span>
+                        <span class="controlColor" onclick="LDECB_logic()">更改</span>
                         <span>待机状态：</span>
                         <a href="#" class="controlColor select">启用</a>
                         <a href="#" class="controlColor controlButton">禁用</a>
@@ -25,6 +25,12 @@
                     </div>
                 </div>
                 <div class="waterTmp">
+                    <header class="backGray">
+                        流量
+                        <span class="select" v-text="item.flow">--</span>  <span v-text="item.unit">m³/h</span>
+                        扬程
+                        <span class="select" v-text="item.lift">--</span> <span v-text="item.liftUnit">MPa</span>
+                    </header>
                     <header class="backGray">冷冻水供回水温差</header>
                     <div class="left">
                         <span>当前值 </span>
@@ -39,6 +45,12 @@
                     </div>
                 </div>
                 <div class="tmpIf">
+                    <header class="backGray">
+                        优化算法（
+                        <span class="select" v-text="item.optimizationOpenCount">--</span> 台/
+                        <span class="select" v-text="item.optimizationOpenPower">--</span> KW/
+                        <span class="select" v-text="item.optimizationPowerScale">--</span> % )
+                    </header>
                     <header class="backGray">温度判断</header>
                     <p v-for="(item1,index) in item.logicProcess"  :key="index" :class="item1.status==1?'select':''" >
                         ——————
@@ -90,27 +102,26 @@ axios.defaults.baseURL = "http://localhost:3000";
 export default {
   data() {
     return {
-      LDYCB: [],
+      LDECB: [],
       autoBtn: 0,
     };
   },
   mounted() {
-      this.getLDYCB();
+      this.getLDECB();
       var timer = setInterval(() => {
-          this.getLDYCB();
+          this.getLDECB();
       }, 3000);
-
-    //   this.autoHeight();
   },
   methods: {
-    getLDYCB() {
-      axios.get("/api/ldycb").then(res => {
+    getLDECB() {
+      axios.get("/api/ldecb").then(res => {
         if (res.data.result == "success") {
-          this.LDYCB = res.data.content;
+          this.LDECB = res.data.content;
         }
       });
     },
     mAndA(){
+        console.log(1111111);
         this.autoBtn=!this.autoBtn;
 
     },

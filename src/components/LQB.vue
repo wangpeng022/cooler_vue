@@ -1,15 +1,15 @@
 <template>
     <ul class="cooler">
             <div class="header1">
-                <span>冷冻一次泵组</span>
+                <span>冷却泵组</span>
             </div>
-            <li v-for="(item,index) in LDYCB.groupArray" :key="index">
+            <li v-for="(item,index) in  LQB.groupArray" :key="index">
                 <div class="header2">
                     <div class="left">
                         <span class="changeBig" >{{item.name}}</span>
                          开启
                         <span class="select" v-text=" item.openCount">--</span> 台
-                        <span class="controlColor"   >群控设置</span>
+                        <span class="controlColor">群控设置</span>
                         群控逻辑：
                         <span v-text="item.logicName"></span>
                          <!-- <span v-text="item.logicId"></span> -->
@@ -90,23 +90,23 @@ axios.defaults.baseURL = "http://localhost:3000";
 export default {
   data() {
     return {
-      LDYCB: [],
+       LQB: [],
       autoBtn: 0,
     };
   },
   mounted() {
-      this.getLDYCB();
+      this.getLQB();
       var timer = setInterval(() => {
-          this.getLDYCB();
+          this.getLQB();
       }, 3000);
 
     //   this.autoHeight();
   },
   methods: {
-    getLDYCB() {
-      axios.get("/api/ldycb").then(res => {
+    getLQB() {
+      axios.get("/api/lqb").then(res => {
         if (res.data.result == "success") {
-          this.LDYCB = res.data.content;
+          this. LQB = res.data.content;
         }
       });
     },
@@ -114,16 +114,6 @@ export default {
         this.autoBtn=!this.autoBtn;
 
     },
-    autoHeight(){
-        // 同列高度一致
-        var waterTmp = document.getElementsByClassName("waterTmp");
-        var tmpIf = document.getElementsByClassName("tmpIf");
-        var openNum = document.getElementsByClassName("openNum");
-        var kw = document.getElementsByClassName("kw");
-        for (let i = 0; i < waterTmp.length; i++) {
-            let aa = waterTmp[i].style.height = tmpIf[i].style.height = openNum[i].style.height = kw[i].clientHeight + "px";
-            }
-        }
     }
 };
 </script>

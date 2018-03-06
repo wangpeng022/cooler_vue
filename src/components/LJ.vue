@@ -9,7 +9,7 @@
                         <span class="changeBig" >{{item.name}}</span>
                          开启
                         <span class="select" v-text=" item.openCount">--</span> 台
-                        <span class="controlColor" type="LJ" >群控设置</span>
+                        <span class="controlColor"   >群控设置</span>
                         群控逻辑：
                         <span v-text="item.logicName"></span>
                          <!-- <span v-text="item.logicId"></span> -->
@@ -48,14 +48,14 @@
                     </p>
                 </div>
                 <div class="openNum">
-                    <header class="backGray">冷机开启台数</header>
+                    <header class="backGray">开启台数</header>
                     <span class="select" v-text="item.openCount">--</span>
                     <span class="controlColor">→</span>
                     <span class="select" v-text="item.finallyOpenCount">--</span>
                 </div>
                 <div class="kw">
                     <div class="num" >
-                       <header >冷机</header>
+                       <header>设备编号</header>
                        <p v-for="item2 in item.equipmentArray" :key="item2.id"><span  v-text="item2.id" >--</span>#</p>
                     </div>
                     <div class="load">
