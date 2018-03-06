@@ -1,0 +1,93 @@
+{
+    "version": "0.2",
+    "result": "success",
+    "content": {
+        "groupArray": [{
+            "id": "M501",
+            "name": "冷却塔1组",
+            "isArrow": 1,
+            "openCount": 2,
+            "currentStatus": 0.0,
+            "currentStatusPointId": "M501.53012006",
+            "logicName": "出水温度联合变频",
+            "currentValue": 1.7,
+            "settingValue": null,
+            "settingValuePointId": "M501.63017008",
+            "unit": "℃",
+            "logicProcess": [{
+                "left": "温度过高",
+                "right": "增频",
+                "status": 0
+            }, {
+                "left": "持平",
+                "right": "维持",
+                "status": 0
+            }, {
+                "left": "温度过低",
+                "right": "降频",
+                "status": 0
+            }],
+            "equipmentArray": [{
+                "id": "F01",
+                "name": "1#冷却塔",
+                "autoStatus": 0.0,
+                "frequency": 44.099998,
+                "frequencyPointId": "F01.63007021",
+                "power": 7.5,
+                "alarmStatus": 0,
+                "status": 1,
+                "autoPointId": "F01.33601",
+                "controlPointId": "F01.63007010"
+            }, {
+                "id": "F02",
+                "name": "2#冷却塔",
+                "autoStatus": 0.0,
+                "frequency": 46.0,
+                "frequencyPointId": "F02.63007021",
+                "power": 7.5,
+                "alarmStatus": 0,
+                "status": 1,
+                "autoPointId": "F02.33601",
+                "controlPointId": "F02.63007010"
+            }]
+        }, {
+            "id": "M502",
+            "name": "冷却塔2组",
+            "isArrow": 1,
+            "openCount": 1,
+            "currentStatus": 0.0,
+            "currentStatusPointId": "M502.53012006",
+            "logicName": "出水温度联合变频",
+            "currentValue": 1.8,
+            "settingValue": null,
+            "settingValuePointId": "M502.63017008",
+            "unit": "℃",
+            "logicProcess": [{
+                "left": "温度过高",
+                "right": "增频",
+                "status": 0
+            }, {
+                "left": "持平",
+                "right": "维持",
+                "status": 0
+            }, {
+                "left": "温度过低",
+                "right": "降频",
+                "status": 0
+            }],
+            "equipmentArray": [{
+                "id": "F03",
+                "name": "3#冷却塔",
+                "autoStatus": 0.0,
+                "frequency": 48.0,
+                "frequencyPointId": "F03.63007021",
+                "power": 7.5,
+                "alarmStatus": 0,
+                "status": 1,
+                "autoPointId": "F03.33601",
+                "controlPointId": "F03.63007010"
+            }]
+        }],
+        "moduleOpenCount": 3
+    }
+}

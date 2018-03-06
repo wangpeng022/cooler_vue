@@ -1,10 +1,9 @@
 <template>
-    <div class="content">
     <ul class="cooler">
             <div class="header1">
-                <span>冷机组</span>
+                <span>冷冻一次泵组</span>
             </div>
-            <li v-for="(item,index) in LJ.groupArray" :key="index">
+            <li v-for="(item,index) in LDYCB.groupArray" :key="index">
                 <div class="header2">
                     <div class="left">
                         <span class="changeBig" >{{item.name}}</span>
@@ -60,8 +59,8 @@
                        <p v-for="item2 in item.equipmentArray" :key="item2.id"><span  v-text="item2.id" >--</span>#</p>
                     </div>
                     <div class="load">
-                       <header>负载率/%</header>
-                       <p  v-for="item2 in item.equipmentArray" :key="item2.id"><span v-text="item2.loadRate.toFixed(1)">--</span></p>
+                       <header>频率/Hz</header>
+                       <p  v-for="item2 in item.equipmentArray" :key="item2.id"><span v-text="item2.frequency.toFixed(1)">--</span></p>
                     </div>
                     <div class="watts">
                        <header>功率kW</header>
@@ -84,8 +83,6 @@
                 </div>
             </li>
         </ul>
-
-    </div>
 </template>
 <script>
 import axios from "Axios";
@@ -93,29 +90,27 @@ axios.defaults.baseURL = "http://localhost:3000";
 export default {
   data() {
     return {
-      LJ: [],
+      LDYCB: [],
       autoBtn: 0,
     };
   },
   mounted() {
-      this.getLJ();
+      this.getLDYCB();
       var timer = setInterval(() => {
-          this.getLJ();
+          this.getLDYCB();
       }, 3000);
 
     //   this.autoHeight();
   },
   methods: {
-    getLJ() {
-      axios.get("/api/lj").then(res => {
+    getLDYCB() {
+      axios.get("/api/ldycb").then(res => {
         if (res.data.result == "success") {
-          this.LJ = res.data.content;
+          this.LDYCB = res.data.content;
         }
-        console.log(this.LG);
       });
     },
     mAndA(){
-        console.log(1111111);
         this.autoBtn=!this.autoBtn;
 
     },

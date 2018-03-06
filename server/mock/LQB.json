@@ -1,0 +1,90 @@
+{
+    "version": "0.2",
+    "result": "success",
+    "content": {
+        "groupArray": [{
+            "id": "M401",
+            "name": "冷却泵组1",
+            "isArrow": 1,
+            "openCount": 2,
+            "currentStatus": 0.0,
+            "currentStatusPointId": "M401.53012005",
+            "logicName": "冷却塔进出水温差",
+            "currentValue": 31.3,
+            "settingValue": 5.0,
+            "settingValuePointId": "M401.53013024",
+            "unit": "℃",
+            "logicProcess": [{
+                "left": "温差过高",
+                "right": "增频",
+                "status": 1
+            }, {
+                "left": "持平",
+                "right": "维持",
+                "status": 0
+            }, {
+                "left": "温差过低",
+                "right": "降频",
+                "status": 0
+            }],
+            "equipmentArray": [{
+                "id": "E01",
+                "name": "1#冷却泵",
+                "autoStatus": 0.0,
+                "frequency": 42.0,
+                "frequencyPointId": "E01.63006007",
+                "power": 45.0,
+                "status": 1,
+                "autoPointId": "E01.53602",
+                "controlPointId": "E01.63006008"
+            }, {
+                "id": "E02",
+                "name": "2#冷却泵",
+                "autoStatus": 0.0,
+                "frequency": 42.0,
+                "frequencyPointId": "E02.63006007",
+                "power": 45.0,
+                "status": 1,
+                "autoPointId": "E02.53602",
+                "controlPointId": "E02.63006008"
+            }]
+        }, {
+            "id": "M402",
+            "name": "冷却泵组2",
+            "isArrow": 1,
+            "openCount": 1,
+            "currentStatus": 0.0,
+            "currentStatusPointId": "M402.53012005",
+            "logicName": "冷却塔进出水温差",
+            "currentValue": 34.299998,
+            "settingValue": 5.0,
+            "settingValuePointId": "M402.53013024",
+            "unit": "℃",
+            "logicProcess": [{
+                "left": "温差过高",
+                "right": "增频",
+                "status": 1
+            }, {
+                "left": "持平",
+                "right": "维持",
+                "status": 0
+            }, {
+                "left": "温差过低",
+                "right": "降频",
+                "status": 0
+            }],
+            "equipmentArray": [{
+                "id": "E03",
+                "name": "3#冷却泵",
+                "autoStatus": 0.0,
+                "frequency": 42.0,
+                "frequencyPointId": "E03.63006007",
+                "power": 45.0,
+                "status": 1,
+                "autoPointId": "E03.53602",
+                "controlPointId": "E03.63006008"
+            }]
+        }],
+        "moduleOpenCount": 3
+    }
+}

@@ -1,0 +1,202 @@
+{
+    "result": "success",
+    "content": {
+        "moduleOpenCount": 2,
+        "groupArray": [
+            {
+                "id": "1001",
+                "name": "设备组1",
+                "openCount": 2,
+                "finallyOpenCount": 2,
+                "autoStatus": 1,
+                "autoStatusPointId": "33344",
+                "logicName": "逻辑1",
+                "logicId": "abc",
+                "currentValue": 2.0,
+                "settingValue": 2.8,
+                "settingValuePointId": "3322",
+                "unit": "kW",
+                "standbyMode": 0,
+                "standbyModePointId": "2345",
+                "logicProcess": [
+                    {
+                        "left": "水温过高",
+                        "right": "加机",
+                        "status": 0
+                    },
+                    {
+                        "left": "持平",
+                        "right": "维持",
+                        "status": 1
+                    },
+                    {
+                        "left": "水温过低",
+                        "right": "减机",
+                        "status": 0
+                    }
+                ],
+                "equipmentArray": [
+                    {
+                        "id": "1",
+                        "name": "设备1",
+                        "autoStatus": 1,
+                        "loadRate": 28.8,
+                        "power": 38.8,
+                        "status": 1,
+                        "switchStatus": 1,
+                        "controlPointId": "34555"
+                    },
+                    {
+                        "id": "2",
+                        "name": "设备2",
+                        "autoStatus": 1,
+                        "loadRate": 28.8,
+                        "power": 38.8,
+                        "status": 2,
+                        "switchStatus": 1,
+                        "controlPointId": "34555"
+                    }
+                ]
+            },
+            {
+                "id": "1002",
+                "name": "设备组2",
+                "openCount": 2,
+                "finallyOpenCount": 2,
+                "autoStatus": 1,
+                "autoStatusPointId": "33344",
+                "logicName": "逻辑1",
+                "logicId": "abc",
+                "currentValue": 2.0,
+                "settingValue": 2.8,
+                "settingValuePointId": "3322",
+                "unit": "kW",
+                "standbyMode": 0,
+                "standbyModePointId": "2345",
+                "logicProcess": [
+                    {
+                        "left": "水温过高",
+                        "right": "加机",
+                        "status": 1
+                    },
+                    {
+                        "left": "持平",
+                        "right": "维持",
+                        "status": 0
+                    },
+                    {
+                        "left": "水温过低",
+                        "right": "减机",
+                        "status": 0
+                    }
+                ],
+                "equipmentArray": [
+                    {
+                        "id": "1",
+                        "name": "设备1",
+                        "autoStatus": 1,
+                        "loadRate": 28.8,
+                        "power": 38.8,
+                        "status": 1,
+                        "switchStatus": 1,
+                        "controlPointId": "34555"
+                    },
+                    {
+                        "id": "2",
+                        "name": "设备2",
+                        "autoStatus": 1,
+                        "loadRate": 28.8,
+                        "power": 38.8,
+                        "status": 2,
+                        "switchStatus": 1,
+                        "controlPointId": "34555"
+                    }
+                ]
+            },{
+                "id": "1003",
+                "name": "设备组3",
+                "openCount": 3,
+                "finallyOpenCount": 3,
+                "autoStatus": 1,
+                "autoStatusPointId": "33344",
+                "logicName": "逻辑1",
+                "logicId": "abc",
+                "currentValue": 2.0,
+                "settingValue": 2.8,
+                "settingValuePointId": "3322",
+                "unit": "kW",
+                "standbyMode": 0,
+                "standbyModePointId": "2345",
+                "logicProcess": [
+                    {
+                        "left": "水温过高",
+                        "right": "加机",
+                        "status": 1
+                    },
+                    {
+                        "left": "持平",
+                        "right": "维持",
+                        "status": 0
+                    },
+                    {
+                        "left": "水温过低",
+                        "right": "减机",
+                        "status": 0
+                    }
+                ],
+                "equipmentArray": [
+                    {
+                        "id": "1",
+                        "name": "设备1",
+                        "autoStatus": 1,
+                        "loadRate": 28.8,
+                        "power": 38.8,
+                        "status": 1,
+                        "switchStatus": 1,
+                        "controlPointId": "34555"
+                    },
+                    {
+                        "id": "2",
+                        "name": "设备2",
+                        "autoStatus": 1,
+                        "loadRate": 28.8,
+                        "power": 38.8,
+                        "status": 2,
+                        "switchStatus": 1,
+                        "controlPointId": "34555"
+                    },
+                    {
+                        "id": "3",
+                        "name": "设备3",
+                        "autoStatus": 1,
+                        "loadRate": 28.8,
+                        "power": 38.8,
+                        "status": 0,
+                        "switchStatus": 1,
+                        "controlPointId": "34555"
+                    },
+                    {
+                        "id": "4",
+                        "name": "设备1",
+                        "autoStatus": 1,
+                        "loadRate": 28.8,
+                        "power": 38.8,
+                        "status": 1,
+                        "switchStatus": 1,
+                        "controlPointId": "34555"
+                    },
+                    {
+                        "id": "5",
+                        "name": "设备2",
+                        "autoStatus": 1,
+                        "loadRate": 28.8,
+                        "power": 38.8,
+                        "status": 2,
+                        "switchStatus": 1,
+                        "controlPointId": "34555"
+                    }
+                ]
+            }
+        ]
+    }
+}
