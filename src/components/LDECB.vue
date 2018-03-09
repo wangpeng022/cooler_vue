@@ -14,9 +14,6 @@
                         <span v-text="item.logicName"></span>
                          <!-- <span v-text="item.logicId"></span> -->
                         <span class="controlColor" onclick="LDECB_logic()">更改</span>
-                        <span>待机状态：</span>
-                        <a href="#" class="controlColor select">启用</a>
-                        <a href="#" class="controlColor controlButton">禁用</a>
                     </div>
                     <div class="right">
                          当前：<span class="controlColor select" v-text="item.autoStatus==0?'手动':'自动'">手动</span>

@@ -73,7 +73,7 @@
                     <div class="switch_handle" >
                        <header>开关</header>
                        <p v-for="item2 in item.equipmentArray"
-                       :key="item2.id" v-show="!item2.switchStatus">
+                       :key="item2.id" v-show="autoBtn">
                             <span class="controlColor controlButton"
                             v-text="item2.switchStatus==0?'开启':'关闭'">
                                 关闭
